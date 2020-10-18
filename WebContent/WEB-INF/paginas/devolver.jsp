@@ -32,7 +32,7 @@
 			</div>
 			<div class="col-md-6 col-sm-12">
 				<p>DNI: ${dni}</p> 
-				<p>Salario: ${salario}</p>
+				<p>SALARIO: ${salario}</p>
 			</div>
 		</div>
 		<div class="p-4">

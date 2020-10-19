@@ -3,8 +3,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>DWES.empresa</groupId>
-	<artifactId>gestion_nomina</artifactId>
+	<artifactId>empresa</artifactId>
 	<version>1.0</version>
+	<packaging>war</packaging>
 
 	<dependencies>
 		<dependency>
@@ -39,6 +40,10 @@
 				<configuration>
 					<release>11</release>
 				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.0.0</version>
 			</plugin>
 		</plugins>
 	</build>

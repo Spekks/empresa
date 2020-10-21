@@ -9,10 +9,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.EmpleadoImplementacion;
-import dao.NominaImplementacion;
+import bean.EmpleadoBean;
+import bean.NominaBean;
+import dao.EmpleadoImpl;
+import dao.NominaImpl;
 import modelo.Empleado;
 import modelo.Nomina;
+import servicio.ServicioImpl;
 
 /**
  * Clase que implementa el servlet que actuará de controlador entre los modelos Empleado y Nomina y los .jsp.
@@ -86,10 +89,9 @@ public class Servlet extends HttpServlet {
 	 */
 	protected void listar (HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
-		EmpleadoImplementacion empleado = new EmpleadoImplementacion();
-		List<Empleado> le = empleado.listaEmpl();
-		request.setAttribute("empleados", le);
+		ServicioImpl servicio = new ServicioImpl();
+		List<EmpleadoBean> eb = servicio.listarEmpleados();
+		request.setAttribute("empleados", eb);
 		request.getRequestDispatcher("/WEB-INF/paginas/listar.jsp").forward(request, response);
 	}
 	
@@ -115,9 +117,8 @@ public class Servlet extends HttpServlet {
 	protected void devolverSalario (HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String dni = request.getParameter("dni");
-		Nomina nomina = new Nomina();
-		NominaImplementacion nom = new NominaImplementacion();
-		nomina = nom.devolverDniSueldo(dni);
+		ServicioImpl servicio = new ServicioImpl();
+		NominaBean nomina = servicio.devolverSueldo(dni);
 		if (nomina == null) {
 			request.getRequestDispatcher("/WEB-INF/paginas/devolver.jsp").forward(request, response);
 		}
@@ -135,9 +136,9 @@ public class Servlet extends HttpServlet {
 	 */
 	protected void listarYModificar (HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		EmpleadoImplementacion empleado = new EmpleadoImplementacion();
-		List<Empleado> le = empleado.listaEmpl();
-		request.setAttribute("empleados", le);
+		ServicioImpl servicio = new ServicioImpl();
+		List<EmpleadoBean> eb = servicio.listarEmpleados();
+		request.setAttribute("empleados", eb);
 		request.getRequestDispatcher("/WEB-INF/paginas/empleado.jsp").forward(request, response);
 	}
 	
@@ -152,10 +153,9 @@ public class Servlet extends HttpServlet {
 	protected void modificarEmpleado (HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		int empleado_id = Integer.parseInt(request.getParameter("empleado_id"));
-		Empleado empleado = new Empleado();
-		EmpleadoImplementacion e = new EmpleadoImplementacion();
-		empleado = e.devolver(empleado_id);
-		request.setAttribute("empleado", empleado);
+		ServicioImpl servicio = new ServicioImpl();
+		EmpleadoBean eb = servicio.seleccionarEmpleado(empleado_id);
+		request.setAttribute("empleado", eb);
 		request.getRequestDispatcher("/WEB-INF/paginas/modificar.jsp").forward(request, response);
 	}
 }

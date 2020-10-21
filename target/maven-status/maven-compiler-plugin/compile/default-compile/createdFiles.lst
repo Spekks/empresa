@@ -1,6 +1,10 @@
-dao/NominaImplementacion.class
-dao/EmpleadoImplementacion.class
-controlador/Servlet.class
-modelo/Empleado.class
+bean/EmpleadoBean.class
 conexion/Conector.class
 modelo/Nomina.class
+dao/NominaImpl.class
+servicio/IServicio.class
+controlador/Servlet.class
+modelo/Empleado.class
+servicio/ServicioImpl.class
+dao/EmpleadoImpl.class
+bean/NominaBean.class

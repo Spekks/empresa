@@ -12,7 +12,7 @@ import modelo.Nomina;
  * @author Héctor
  * @since 16/10/2020
  */
-public class NominaImplementacion {
+public class NominaImpl {
 
 	/**
 	 * Sentencia SQL que devuelve todos los datos de la tabla Nomina de la base de datos

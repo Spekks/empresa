@@ -14,7 +14,7 @@ import modelo.Empleado;
  * @author Héctor
  * @since 16/10/2020
  */
-public class EmpleadoImplementacion {
+public class EmpleadoImpl {
 
 	/**
 	 * Sentencia SQL para seleccionar todos los empleados

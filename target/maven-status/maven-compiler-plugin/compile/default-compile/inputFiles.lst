@@ -1,6 +1,10 @@
-/home/hector/eclipse-workspace/empresa/src/dao/NominaImplementacion.java
+/home/hector/eclipse-workspace/empresa/src/dao/EmpleadoImpl.java
+/home/hector/eclipse-workspace/empresa/src/servicio/IServicio.java
 /home/hector/eclipse-workspace/empresa/src/conexion/Conector.java
 /home/hector/eclipse-workspace/empresa/src/modelo/Nomina.java
-/home/hector/eclipse-workspace/empresa/src/dao/EmpleadoImplementacion.java
+/home/hector/eclipse-workspace/empresa/src/bean/NominaBean.java
+/home/hector/eclipse-workspace/empresa/src/bean/EmpleadoBean.java
+/home/hector/eclipse-workspace/empresa/src/dao/NominaImpl.java
+/home/hector/eclipse-workspace/empresa/src/servicio/ServicioImpl.java
 /home/hector/eclipse-workspace/empresa/src/controlador/Servlet.java
 /home/hector/eclipse-workspace/empresa/src/modelo/Empleado.java

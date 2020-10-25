@@ -10,8 +10,18 @@ import dao.NominaImpl;
 import modelo.Empleado;
 import modelo.Nomina;
 
+/**
+ * Clase que implementa la interface de servicio. Encargada de implementar los métodos que transforman los modelos en modelos Bean
+ * de cara a devolverlos al controlador
+ * @author hector
+ * @since 25/10/2020
+ */
 public class ServicioImpl implements IServicio{
 	
+	/**
+	 * Método encargado de devolver una lista de EmpleadoBean.
+	 * @return lista de empleados Bean
+	 */
 	public List<EmpleadoBean> listarEmpleados() {
 		List<EmpleadoBean> listaEmpBean = new ArrayList();
 		
@@ -35,8 +45,8 @@ public class ServicioImpl implements IServicio{
 	}
 	/**
 	 * Devuelve el dni y el sueldo de la nómina.
-	 * @param dni
-	 * @return
+	 * @param dni String DNI de un empleado
+	 * @return nómina Bean
 	 */
 	public NominaBean devolverSueldo(String dni) {
 		Nomina nomina = new Nomina();
@@ -52,6 +62,10 @@ public class ServicioImpl implements IServicio{
 		return nominaB;
 	}
 	
+	/**
+	 * Método que devuelve un empleado Bean.
+	 * @return nómina Bean
+	 */
 	public EmpleadoBean seleccionarEmpleado(int empleado_id) {
 		Empleado empleado = new Empleado();
 		EmpleadoImpl ei = new EmpleadoImpl();

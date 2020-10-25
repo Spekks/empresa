@@ -2,6 +2,11 @@ package bean;
 
 import java.io.Serializable;
 
+/**
+ * Clase que implementa el modelo Bean de la clase Empleado.
+ * @author Héctor
+ * @since 25/10/2020
+ */
 public class EmpleadoBean implements Serializable{
 	
 	/**
@@ -125,14 +130,5 @@ public class EmpleadoBean implements Serializable{
     public void setAnos(int anos) {
         this.anos = anos;
     } 
-
-    /**
-     * Método toString que devuelve un empleado en forma de cadena.
-     * @return Cadena con todas las características del empleado
-     */
-	public String toString() {
-		return "Empleado [empleado_id=" + empleado_id + ", nombre=" + nombre + ", dni=" + dni + ", sexo=" + sexo
-				+ ", categoria=" + categoria + ", anos=" + anos + "]";
-	}
 	
 }

@@ -82,6 +82,7 @@ public class Servlet extends HttpServlet {
 	/**
 	 * Método que dirige a la vista "listar.jsp", una vista que requiere de una lista de empleados que también
 	 * son devueltos por el método.
+	 * EDIT: ahora devuelve una lista de empleados Bean.
 	 * @param request HttpServletRequest petición que recibe del .jsp
 	 * @param response HttpServletRequest respuesta que recibe del .jsp
 	 * @throws ServletException
@@ -109,6 +110,7 @@ public class Servlet extends HttpServlet {
 	
 	/**
 	 * Método que dirige a la vista "devolver.jsp", devolviendo el sueldo y el DNI de una nómina.
+	 * EDIT: ahora devuelve el suelo y el DNI de la clase NominaBean.
 	 * @param request HttpServletRequest petición que recibe del .jsp
 	 * @param response HttpServletRequest respuesta que recibe del .jsp
 	 * @throws ServletException
@@ -129,6 +131,7 @@ public class Servlet extends HttpServlet {
 	
 	/**
 	 * Método que dirige a la vista "empleado.jsp", que devuelve una lista de empleados.
+	 * EDIT: ahora devuelve una lista de empleados Bean.
 	 * @param request HttpServletRequest petición que recibe del .jsp
 	 * @param response HttpServletRequest respuesta que recibe del .jsp
 	 * @throws ServletException
@@ -145,6 +148,7 @@ public class Servlet extends HttpServlet {
 	/**
 	 * Método que dirige a la vista "modificar.jsp", llevando consigo a un empleado traído de la anterior
 	 * vista.
+	 * EDIT: ahora el método devuelve un empleado Bean.
 	 * @param request HttpServletRequest petición que recibe del .jsp
 	 * @param response HttpServletRequest respuesta que recibe del .jsp
 	 * @throws ServletException

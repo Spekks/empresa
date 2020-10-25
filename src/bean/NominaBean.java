@@ -2,6 +2,11 @@ package bean;
 
 import java.io.Serializable;
 
+/**
+ * Clase que define al modelo Bean de la clase Nomina.
+ * @author Héctor
+ * @since 25/10/2020
+ */
 public class NominaBean implements Serializable{
 	
 	/**
@@ -69,12 +74,4 @@ public class NominaBean implements Serializable{
         this.sueldo = sueldo;
     }
 
-    /**
-     * Método toString que devuelve una nómina en forma de cadena.
-     * @return Cadena con todas las características de la nómina
-     */
-	public String toString() {
-		return "Nomina [nomina_id=" + nomina_id + ", dni_empleado=" + dni_empleado + ", sueldo=" + sueldo + "]";
-	}
-	
 }
